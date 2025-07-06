@@ -12,7 +12,11 @@ jobs:
       uses: actions/setup-python@v5
       with:
         python-version: 3.8
+        
+    - name: Checkout repository
+      uses: actions/checkout@v3
 
     - name: Install dependencies
       run: |
+        ls -lra && pwd
         pip install -r requirements.txt
